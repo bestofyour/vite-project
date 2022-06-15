@@ -1,5 +1,5 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
-import type {RouteRecordRaw} from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 import { PageEnum } from '@/enums/pageEnum'
 import { setupRouterGuard, createStateGuard, createPermissionGuard } from './guard'
@@ -10,7 +10,7 @@ const basicRoutes = [
         redirect: PageEnum.BASE_LOGIN,
         meta: {
             title: 'Root',
-        }
+        },
     },
     {
         path: '/login',
@@ -18,7 +18,7 @@ const basicRoutes = [
         component: () => import('@/views/login/Login.vue'),
         meta: {
             title: 'login',
-        }
+        },
     },
     {
         path: '/index',
@@ -26,9 +26,9 @@ const basicRoutes = [
         component: () => import('@/views/index/Index.vue'),
         meta: {
             title: 'index',
-            ignoreAuth: true
-        }
-    }
+            ignoreAuth: true,
+        },
+    },
 ]
 console.log(import.meta.env.VITE_PUBLIC_PATH)
 const router = createRouter({
@@ -36,7 +36,7 @@ const router = createRouter({
     routes: basicRoutes as unknown as RouteRecordRaw[],
     strict: true,
     scrollBehavior: () => ({ left: 0, top: 0 }),
-  })
+})
 
 export const setupRouter = (app: App) => {
     setupRouterGuard(router)
