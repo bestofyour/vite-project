@@ -6,7 +6,13 @@ import { isObject, isWindow } from '@/utils/is'
 export function useScroll() {
     const title = useTitle('3213213')
     const s = ref<string | boolean>()
-    s.value = undefined
+    s.value = '1'
+    watch(
+        () => title,
+        (value, preValue) => {
+            console.log(value, preValue)
+        },
+    )
     return {
         title,
     }
