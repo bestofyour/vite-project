@@ -67,7 +67,7 @@
             "stylelint --fix",
             "prettier --write"
         ],
-        "*.{md, config.ts}": [
+        "*.{md, d.ts}": [
             "prettier --write"
         ]
     }
