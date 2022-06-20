@@ -50,7 +50,8 @@
     "lint-staged": {
         "*.{js,jsx,ts,tsx,d.ts}": [
             "eslint --fix",
-            "prettier --write"
+            "prettier --write",
+            "stylelint --fix"
         ],
         "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
             "prettier --write--parser json"
