@@ -52,7 +52,7 @@
             "eslint --fix",
             "prettier --write"
         ],
-        "types/*.{d.ts}, *.config.ts": [
+        "types/*.{d.ts}, vite.config.ts": [
             "eslint --fix",
             "prettier --write"
         ],
