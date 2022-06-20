@@ -52,6 +52,10 @@
             "eslint --fix",
             "prettier --write"
         ],
+        "types/*{.d.ts}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
         "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
             "prettier --write--parser json"
         ],
@@ -67,7 +71,7 @@
             "stylelint --fix",
             "prettier --write"
         ],
-        "*.{md, d.ts}": [
+        "*.{md}": [
             "prettier --write"
         ]
     }
