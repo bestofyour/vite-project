@@ -1,4 +1,3 @@
-import { Recoverable } from 'repl';
 import type {
     ComponentRenderProxy,
     VNode,

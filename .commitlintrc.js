@@ -15,7 +15,33 @@ module.exports = {
      * Any rules defined here will override rules from @commitlint/config-conventional
      */
     rules: {
-        'type-enum': [2, 'always', ['foo']],
+        'body-leading-blank': [2, 'always'],
+        'footer-leading-blank': [1, 'always'],
+        'header-max-length': [2, 'always', 108],
+        'subject-empty': [2, 'never'],
+        'type-empty': [2, 'never'],
+        'subject-case': [0],
+        'type-enum': [
+          2,
+          'always',
+          [
+            'feat',
+            'fix',
+            'perf',
+            'style',
+            'docs',
+            'test',
+            'refactor',
+            'build',
+            'ci',
+            'chore',
+            'revert',
+            'wip',
+            'workflow',
+            'types',
+            'release',
+          ],
+        ],
     },
     /*
      * Functions that return true if commitlint should ignore the given message.
@@ -29,15 +55,5 @@ module.exports = {
      * Custom URL to show upon failure
      */
     helpUrl: 'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
-    /*
-     * Custom prompt configs
-     */
-    prompt: {
-        messages: {},
-        questions: {
-            type: {
-                description: 'please input type:',
-            },
-        },
-    },
+
 }
