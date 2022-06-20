@@ -5,12 +5,12 @@ module.exports = {
      * Resolve and load conventional-changelog-atom from node_modules.
      * Referenced packages must be installed
      */
-    parserPreset: 'conventional-changelog-atom',
+    // parserPreset: 'conventional-changelog-atom',
     /*
      * Resolve and load @commitlint/format from node_modules.
      * Referenced package must be installed
      */
-    formatter: '@commitlint/format',
+    // formatter: '@commitlint/format',
     /*
      * Any rules defined here will override rules from @commitlint/config-conventional
      */
