@@ -5,7 +5,9 @@
 </script>
 
 <template>
-  <RouterView />
+  <div class="xl:container xl:mx-auto">
+    <RouterView />
+  </div>
 </template>
 
 <style>

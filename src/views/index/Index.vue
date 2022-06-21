@@ -1,8 +1,7 @@
 <template>
-  <div
-    class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600"
-    @click="click"
-    >{{ title }}</div
+  <div class="columns-4 to-yellow-500/50 bg-yellow-500">111</div>
+  <div class="bg-yellow-500 columns-4 to-yellow-500/50 bg-clip-border" @click="click">
+    {{ title }}</div
   >
 </template>
 
