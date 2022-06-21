@@ -1,24 +1,19 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import eslintPlugin from 'vite-plugin-eslint'
+import { defineConfig, loadEnv, PluginOption } from 'vite'
+import type { ConfigEnv, UserConfig } from 'vite'
+import { createVitePlugins } from './build/vite/plugin'
+import { wrapperEnv } from './build/env'
 import { resolve } from 'path'
-function pathResolve(dir) {
+function pathResolve(dir: string) {
     return resolve(__dirname, '.', dir)
 }
 
+function setupVite({ command, mode }: ConfigEnv): UserConfig {
+    const root = process.cwd()
+    const isBuild = command === 'build'
+    const env = loadEnv(mode, root)
+    const viteEnv = wrapperEnv(env)
+    const plugins: PluginOption[] = createVitePlugins(viteEnv, isBuild)
+    return {}
+}
 // https://vitejs.dev/config/
-export default defineConfig({
-    plugins: [
-        vue(),
-        eslintPlugin({
-            include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'],
-        }),
-    ],
-    resolve: {
-        alias: {
-            '@': pathResolve('src'),
-        },
-
-        extensions: ['.vue', '.ts', '.tsx'],
-    },
-})
+export default defineConfig(setupVite)
