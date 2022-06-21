@@ -1,5 +1,9 @@
 <template>
-  <div>{{ title }}</div>
+  <div
+    class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600"
+    @click="click"
+    >{{ title }}</div
+  >
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +17,10 @@
   // import { toLogicFlowData } from './adp'
   import FlowChartToolbar from './FlowChartToolbar.vue';
   const title = useScroll();
+
+  function click() {
+    console.log(111111111);
+  }
 </script>
 
 <style lang="css" scoped>

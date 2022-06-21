@@ -2,6 +2,7 @@ import { PluginOption } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
 import windiCSS from 'vite-plugin-windicss';
+import { configPwaConfig } from './pwa';
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const {
     VITE_USE_IMAGEMIN,
@@ -20,6 +21,10 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // vite-plugin-windicss
   vitePlugins.push(windiCSS());
+  if (isBuild) {
+    // vite-plugin-pwa
+    vitePlugins.push(configPwaConfig(viteEnv));
+  }
 
   return vitePlugins;
 }
