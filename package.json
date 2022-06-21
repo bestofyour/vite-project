@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.5",
+    "@iconify/iconify": "^2.2.1",
     "@logicflow/core": "^1.1.19",
     "@logicflow/extension": "^1.1.19",
     "@vueuse/core": "^8.6.0",

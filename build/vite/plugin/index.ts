@@ -1,6 +1,7 @@
 import { PluginOption } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import eslintPlugin from 'vite-plugin-eslint';
+import windiCSS from 'vite-plugin-windicss';
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const {
     VITE_USE_IMAGEMIN,
@@ -12,9 +13,6 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     vue(),
-    VitePluginCertificate({
-      source: 'coding',
-    }),
     eslintPlugin({
       include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'],
     }),

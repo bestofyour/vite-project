@@ -26,7 +26,7 @@ function setupVite({ command, mode }: ConfigEnv): UserConfig {
     plugins,
     resolve: {
       alias: {
-        '@/': pathResolve('src'),
+        '@': pathResolve('src'),
       },
     },
     server: {
