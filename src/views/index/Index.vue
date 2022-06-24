@@ -3,6 +3,9 @@
   <div class="bg-yellow-500 columns-4 to-yellow-500/50 bg-clip-border" @click="click">
     {{ title }}</div
   >
+
+  <div>{{ user.$state.user }}</div>
+  <div>{{ count }}</div>
 </template>
 
 <script lang="ts" setup>
@@ -15,8 +18,10 @@
   import { Snapshot, BpmnElement, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
   // import { toLogicFlowData } from './adp'
   import FlowChartToolbar from './FlowChartToolbar.vue';
+  import { userStore } from '@/store/modules/user';
   const title = useScroll();
-
+  const user = userStore();
+  const count = user.doubleCount;
   function click() {
     console.log(111111111);
   }
