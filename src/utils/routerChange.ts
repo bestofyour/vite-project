@@ -23,7 +23,7 @@ export function listenerRouteChange(
   callback: (route: RouteLocationNormalized) => void,
   immediate = true,
 ) {
-  //    emitter.on(key1, callback);
+  emitter.on(key1, callback);
   immediate && lastChangeTab && callback(lastChangeTab);
 }
 
