@@ -3,6 +3,7 @@ import type { ConfigEnv, UserConfig } from 'vite';
 import { createVitePlugins } from './build/vite/plugin';
 import { createProxy } from './build/vite/proxy';
 import { wrapperEnv } from './build/env';
+import { generateModifyVars } from './build/generateModifyVars';
 import { resolve } from 'path';
 import pkg from './package.json';
 function pathResolve(dir: string) {
@@ -39,6 +40,14 @@ function setupVite({ command, mode }: ConfigEnv): UserConfig {
     },
     esbuild: {
       pure: VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : [],
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+          modifyVars: generateModifyVars(),
+          javascriptEnabled: true,
+        },
+      },
     },
     build: {
       target: 'es2015',

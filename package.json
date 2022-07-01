@@ -16,13 +16,15 @@
     "@logicflow/core": "^1.1.19",
     "@logicflow/extension": "^1.1.19",
     "@vueuse/core": "^8.6.0",
-    "ant-design-vue": "^3.2.5",
+    "ant-design-vue": "^3.2.9",
     "d3": "^7.5.0",
     "graphql": "^16.5.0",
     "mitt": "^3.0.0",
+    "mockjs": "^1.1.0",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.15",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -32,12 +34,14 @@
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "@vitejs/plugin-vue": "^2.3.3",
+    "consola": "^2.15.3",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-define-config": "^1.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.1.1",
     "husky": "^8.0.1",
+    "less": "^4.1.3",
     "lint-staged": "^13.0.2",
     "postcss-html": "^1.4.1",
     "prettier": "^2.7.1",
@@ -51,7 +55,9 @@
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
     "vite-plugin-eslint": "^1.6.1",
+    "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pwa": "^0.12.0",
+    "vite-plugin-style-import": "^2.0.0",
     "vite-plugin-windicss": "^1.8.4",
     "vue-tsc": "^0.34.7"
   }
